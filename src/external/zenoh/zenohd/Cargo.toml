@@ -1,0 +1,70 @@
+#
+# Copyright (c) 2023 ZettaScale Technology
+#
+# This program and the accompanying materials are made available under the
+# terms of the Eclipse Public License 2.0 which is available at
+# http://www.eclipse.org/legal/epl-2.0, or the Apache License, Version 2.0
+# which is available at https://www.apache.org/licenses/LICENSE-2.0.
+#
+# SPDX-License-Identifier: EPL-2.0 OR Apache-2.0
+#
+# Contributors:
+#   ZettaScale Zenoh Team, <zenoh@zettascale.tech>
+#
+[package]
+authors = { workspace = true }
+categories = { workspace = true }
+description = { workspace = true }
+edition = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+name = "zenohd"
+readme = "README.md"
+repository = { workspace = true }
+rust-version = { workspace = true }
+version = { workspace = true }
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default = ["zenoh/default"]
+shared-memory = ["zenoh/shared-memory"]
+
+[dependencies]
+clap = { workspace = true, features = ["derive"] }
+git-version = { workspace = true }
+json5 = { workspace = true }
+lazy_static = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+zenoh = { workspace = true, default-features = false, features = [
+  "internal",
+  "internal_config",
+  "plugins",
+  "runtime_plugins",
+  "unstable",
+] }
+zenoh-config = { workspace = true }
+zenoh-util = { workspace = true }
+
+[dev-dependencies]
+rand = { workspace = true, features = ["default"] }
+
+[build-dependencies]
+rustc_version = { workspace = true }
+
+[package.metadata.deb]
+assets = [
+  # binary
+  { source = "target/release/zenohd", dest = "/usr/bin/", mode = "755" },
+  # config
+  { source = ".service/zenohd.json5", dest = "/etc/zenohd/", mode = "644" },
+  # service
+  { source = ".service/zenohd.service", dest = "/lib/systemd/system/zenohd.service", mode = "644" },
+]
+copyright = "2024 ZettaScale Technology"
+depends = "$auto"
+license-file = ["../LICENSE", "0"]
+maintainer = "zenoh-dev@eclipse.org"
+maintainer-scripts = ".deb"
+name = "zenohd"
+section = "net"
