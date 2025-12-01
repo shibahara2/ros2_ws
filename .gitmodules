@@ -1,0 +1,9 @@
+[submodule "src/unitree_ros2"]
+	path = src/unitree_ros2
+	url = https://github.com/unitreerobotics/unitree_ros2.git
+[submodule "src/zenoh-plugin-ros2dds"]
+	path = src/zenoh-plugin-ros2dds
+	url = https://github.com/eclipse-zenoh/zenoh-plugin-ros2dds.git
+[submodule "src/zenoh"]
+	path = src/zenoh
+	url = https://github.com/eclipse-zenoh/zenoh.git
