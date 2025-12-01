@@ -1,6 +1,0 @@
-Invoking command in '/workspace/src/ros/build/turtlesim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspace/src/ros/ros_tutorials/turtlesim -DCMAKE_INSTALL_PREFIX=/workspace/src/ros/install/turtlesim
-Invoked command in '/workspace/src/ros/build/turtlesim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspace/src/ros/ros_tutorials/turtlesim -DCMAKE_INSTALL_PREFIX=/workspace/src/ros/install/turtlesim
-Invoking command in '/workspace/src/ros/build/turtlesim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspace/src/ros/build/turtlesim -- -j4 -l4
-Invoked command in '/workspace/src/ros/build/turtlesim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspace/src/ros/build/turtlesim -- -j4 -l4
-Invoking command in '/workspace/src/ros/build/turtlesim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspace/src/ros/build/turtlesim
-Invoked command in '/workspace/src/ros/build/turtlesim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspace/src/ros/build/turtlesim
